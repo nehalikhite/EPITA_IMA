@@ -1,0 +1,27 @@
+CREATE SCHEMA EPITA 
+set schema EPITA
+
+drop table EPITA.IDENTITIES;
+
+CREATE TABLE IDENTITIES
+(IDENTITY_ID INT NOT NULL,
+IDENTITY_DISPLAYNAME VARCHAR(255),
+IDENTITY_EMAIL VARCHAR(255),
+IDENTITY_BIRTHDATE DATE,
+PRIMARY KEY (IDENTITY_ID)
+
+);
+
+
+insert into EPITA.IDENTITIES values (1,'neha','test@gmail.com','1995-11-17');
+insert into EPITA.IDENTITIES values (2,'john','john@gmail.com','1935-8-11');
+insert into EPITA.IDENTITIES values (3,'jacques','jacques@gmail.com','1964-7-3');
+insert into EPITA.IDENTITIES values (4,'patrick','patrick@gmail.com','1911-10-9');
+
+--select * from EPITA.IDENTITIES;
+
+--update EPITA.IDENTITIES set IDENTITY_DISPLAYNAME = 'khadus', 
+--IDENTITY_EMAIL = 'khadus@gmail.com', IDENTITY_BIRTHDATE = '1995-11-17' 
+--where IDENTITY_ID = 1
+
+--delete from EPITA.IDENTITIES where IDENTITY_ID = 5;
